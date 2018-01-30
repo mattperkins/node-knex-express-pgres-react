@@ -6,4 +6,4 @@ const knex = require('knex')({
     }
 })
 
-modeule.exports = knex
+module.exports = knex
