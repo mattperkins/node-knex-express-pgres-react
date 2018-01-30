@@ -1,17 +1,27 @@
 body{
     background-color: #f7f7f7;
 }
-.masthead{
-    height: 100vh;
+
+/* =============LAYOUT================= */
+.wrapper{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* =============TOPNAV================= */
+
+.TopNav{
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
-.pull-up{
-    margin-top: -100px;
+
+/* =============LIST ITEMS================= */
+.ListItems{
+
 }
-.highlight{
-    background-color: #ff0;
-    padding: 6px;
+
+/* =============LIST ITEM================= */
+.ListItem{
+    
 }
