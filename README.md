@@ -7,8 +7,8 @@
 ## yarn start 
 
 # ENDPOINTS 
-## localhost: 3200 (server)
-## localhost: 3000 (client)
+## http://localhost:3200/api/todo (server)
+## http://localhost:3000 (client)
 
 # DEPLOY 
 ## npm build
