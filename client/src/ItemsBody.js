@@ -8,7 +8,7 @@ class ItemsBody extends React.Component {
 
     state = {
         loading: true,
-        todos: []
+        todos: {}
     }
     
 async componentDidMount() {

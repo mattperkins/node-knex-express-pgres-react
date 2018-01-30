@@ -1,7 +1,10 @@
 body{
     background-color: #f7f7f7;
 }
-
+/* =============THEME================= */
+.white-txt{
+    color: white;
+}
 /* =============LAYOUT================= */
 .wrapper{
     max-width: 1200px;
@@ -22,6 +25,39 @@ body{
 }
 
 /* =============LIST ITEM================= */
-.ListItem{
-    
+.list-group-item, {
+    margin-top: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-success{
+    background: green;
+}
+.bg-danger{
+ background: red;
+}
+/* =============BUTTONS================= */
+.btn{
+    border: 0;
+}
+.btn-group{
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+.btn-delete{
+background: red;
+}
+.btn-edit{
+background: yellow;
+}
+.btn-active{
+background: green;
+}
+/* =============FORM================= */
+.form-input{
+    border: 1px solid #555;
+    background: transparent;
 }

@@ -3,8 +3,9 @@ import React from 'react'
 const ListItem = ({title, isDone}) => {
 return (
 
-    <li className="ListItem">
-    {title} {isDone ? "Done" : "Not Done"}
+    <li className={`list-group-item ${isDone ? 'bg-success' : 'bg-danger'}`}>
+        {title}      
+     <span style={{fontSize: 10}}> ({isDone ? "Done" : "Not Done"})</span>
     </li>
 
 )
