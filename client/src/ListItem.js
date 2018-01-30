@@ -1,10 +1,10 @@
 import React from 'react'
  
-const ListItem = ({text}) => {
+const ListItem = ({title, isDone}) => {
 return (
 
     <li className="ListItem">
-    {text}
+    {title} {isDone ? "Done" : "Not Done"}
     </li>
 
 )
