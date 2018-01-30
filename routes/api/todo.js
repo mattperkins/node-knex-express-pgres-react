@@ -7,7 +7,13 @@ router.get('/', function(req,res){
     // db.select().from('todo').toString()
     
     // select * from "todo"
-    db.select().from('todo').then(function(data){
+    db.select().from('todo').orderBy('id').then(function(data){
+        res.send(data)
+    })
+})
+
+router.get('/:id', function(req,res){
+    db('todo').where({id: req.params.id}).select().then(function(data){
         res.send(data)
     })
 })
@@ -35,6 +41,7 @@ router.patch('/:id', function(req,res){
 })
 // localhost:3200/api/todo/2
 
+// the different between put and patch is "idempotence"
 router.put('/:id', function(req,res){
     
     db('todo').where({ id: req.params.id }).update({
@@ -42,6 +49,12 @@ router.put('/:id', function(req,res){
         is_done: req.body.is_done || null
     }).returning ('*').then(function(data){
         res.send(data)
+    })
+})
+
+router.delete('/:id', function(req,res){
+    db('todo').where({id: req.params.id}).del().then(function(){
+        res.json({success:true})
     })
 })
 
