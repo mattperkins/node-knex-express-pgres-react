@@ -1,0 +1,16 @@
+{
+  "name": "knex-express-pgres-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "author": "DORMshed",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "knex": "^0.14.2",
+    "pg": "^7.4.1"
+  }
+}
