@@ -60,7 +60,7 @@ return (
                     id="is-done" 
                     value={isDone} 
                     onChange={this.onChangeItem}>
-                        <option value="true">Yes</option>
+                    <option value="true">Yes</option>
                         <option value="false">No</option>
                 </select>
                 <div>
