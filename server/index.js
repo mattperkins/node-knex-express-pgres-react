@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({
 app.use('/api', apiRoute)
 
 
+// production config - heroku
 if(process.env.NODE_ENV === "production") {
     app.use(express.static('client/build'))
 
@@ -24,6 +25,7 @@ if(process.env.NODE_ENV === "production") {
     })
 }
 
+// --
 const PORT = process.env.PORT || 3200
-console.log('Server running on localhost ' + PORT)
+console.log('Server is running on localhost ' + PORT)
 app.listen(PORT)
