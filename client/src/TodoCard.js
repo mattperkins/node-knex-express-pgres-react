@@ -10,7 +10,10 @@ super(props)
      editing: false,
      title: props.title,
      isDone: props.isDone
-}}
+    }
+    // this.onEdit = this.onEdit.bind(this)
+    // this.updateState = this.updateState.bind(this)
+}
 
 onEdit = () => {
     this.setState({
@@ -45,6 +48,7 @@ render() {
             title={title} 
             isDone={isDone} 
             onEdit={this.onEdit}
+            id={this.props.id}
         />
     )
 }

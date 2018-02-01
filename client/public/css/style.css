@@ -17,6 +17,7 @@ body{
 .TopNav{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 /* =============LIST ITEMS================= */

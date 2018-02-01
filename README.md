@@ -4,7 +4,7 @@
 # RUN SERVER
 ## npm run server
 # RUN CLIENT
-## yarn start 
+## yarn run client
 
 # ENDPOINTS 
 ## http://localhost:3200/api/todo (server)
@@ -12,6 +12,7 @@
 
 # DEPLOY 
 ## npm build
+## npm run start
 
 
 

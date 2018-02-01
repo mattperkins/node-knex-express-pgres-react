@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import TopNav from './TopNav'
 import ItemsBody from './ItemsBody'
 import SingleItem from './SingleItem';
+import CreateTodo from './CreateTodo'
 
 class App extends React.Component {
 
@@ -15,6 +16,7 @@ class App extends React.Component {
             <TopNav />
                 <div className="wrapper">
                     <Switch>
+                        <Route path="/new" component={CreateTodo} />
                         <Route path="/:id" component={SingleItem} />
                         <Route path="/" exact component={ItemsBody} />
                     </Switch>

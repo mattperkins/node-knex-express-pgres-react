@@ -1,12 +1,13 @@
 import React from 'react'
- 
-const ListItem = ({title, isDone}) => {
+import { Link } from 'react-router-dom'
+
+const ListItem = ({title, isDone, id}) => {
 return (
 
-    <li className={`list-group-item ${isDone ? 'bg-success' : 'bg-danger'}`}>
+    <Link to={`/${id}`} className={`list-group-item ${isDone ? 'bg-success' : 'bg-danger'}`}>
         {title}      
      <span style={{fontSize: 10}}> ({isDone ? "Done" : "Not Done"})</span>
-    </li>
+    </Link>
 
 )
 }

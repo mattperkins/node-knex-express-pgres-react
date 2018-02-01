@@ -1,6 +1,8 @@
 import React from 'react'
- 
-const SingleTodoList = ({title, isDone, onEdit}) => {
+import axios from 'axios'
+import { withRouter } from 'react-router-dom'
+
+const SingleTodoList = ({title, isDone, onEdit, id}) => {
 return (
     
 <div className={`card ${isDone ? 'bg-success' : 'bg-danger'} white-txt`}>
@@ -12,7 +14,11 @@ return (
         {isDone ? 'This todo has been completed' : 'This todo is unfinished'}
     </div>
     <div className="btn-group">
-        <button className="btn btn-delete">Delete</button>
+        <button className="btn btn-delete" onClick={()=>{
+            axios.delete(`/api/todo/${id}`).then(()=>{
+                this.props.history.push('/')
+            })
+        }}>Delete</button>
         <button className="btn btn-edit" onClick={onEdit}>Edit</button>
     </div>
   </div>
@@ -20,4 +26,4 @@ return (
 )
 }
  
-export default SingleTodoList
+export default withRouter(SingleTodoList)

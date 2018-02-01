@@ -37,7 +37,12 @@ return (
     <div>
         <ListItems>
             {this.state.todos.map(todo => {
-                return <ListItem key={todo.id} title={todo.title} isDone={todo.is_done}/>
+                return <ListItem 
+                    key={todo.id} 
+                    title={todo.title} 
+                    isDone={todo.is_done} 
+                    id={todo.id}
+                />
             })}
             
 
